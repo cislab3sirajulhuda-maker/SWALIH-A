@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swalih | Graphic Designer & Visual Artist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f0e17;
+            --surface: #1e1b2e;
+            --text-main: #fffffe;
+            --text-muted: #a7a9be;
+            --primary: #ff8906;
+            --secondary: #f25f4c;
+            --accent: #e53170;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--primary);
+        }
+
+        .nav-badge {
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            color: white;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(229, 49, 112, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            line-height: 1.6;
+        }
+
+        /* Gallery Section */
+        .gallery-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .work-card {
+            background: var(--surface);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+        }
+
+        .work-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border-color: var(--primary);
+        }
+
+        .work-img {
+            height: 250px;
+            background: linear-gradient(45deg, #232136, #393552);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .work-img::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.5));
+        }
+
+        .work-info {
+            padding: 25px;
+        }
+
+        .work-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .work-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Tech Stack Section */
+        .tech-section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .tech-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .tech-item h4 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .tech-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            margin-top: 80px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">SWALIH.</div>
+        <div class="nav-badge">Graphic Designer • 18</div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Crafting Visuals That <span>Tell Stories</span></h1>
+        <p>ഹലോ സ്വാലിഹ്! ഗ്രാഫിക് ഡിസൈനിംഗ് വർക്കുകൾ മനോഹരമായി ആളുകളിലേക്ക് എത്തിക്കാൻ തയ്യാറാക്കിയ ഒരു പ്രൊഫഷണൽ പോർട്ട്ഫോളിയോ ഡിസൈൻ ആണിത്.</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <div class="gallery-container">
+        <h2 class="section-title">Featured Works</h2>
+        <div class="work-grid">
+            
+            <div class="work-card">
+                <div class="work-img" style="background: linear-gradient(135deg, #f72585, #7209b7);">Brand Identity</div>
+                <div class="work-info">
+                    <h3>Brand & Logo Design</h3>
+                    <p>ബ്രാൻഡുകൾക്കായി ആകർഷകമായ ലോഗോകളും വിഷ്വൽ ഗൈഡ്‌ലൈനുകളും ക്രിയേറ്റ് ചെയ്ത പ്രോജക്റ്റുകൾ.</p>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <div class="work-img" style="background: linear-gradient(135deg, #4361ee, #4cc9f0);">Social Media Post</div>
+                <div class="work-info">
+                    <h3>Social Media Creatives</h3>
+                    <p>മാർക്കറ്റിംഗിനും പ്രൊമോഷനുകൾക്കും വേണ്ടിയുള്ള മോഡേൺ പോസ്റ്ററുകളും ബാനറുകളും.</p>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <div class="work-img" style="background: linear-gradient(135deg, #ff8906, #f25f4c);">UI / Visual Art</div>
+                <div class="work-info">
+                    <h3>Visual Concepts</h3>
+                    <p>ആർട്ടിസ്റ്റിക് ഡിസൈനുകളും ഡിജിറ്റൽ ഇല്ലസ്ട്രേഷൻ വർക്കുകളും.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- How it's built (HTML, CSS, JS section) -->
+    <section class="tech-section">
+        <h2 class="section-title">Behind The Code</h2>
+        <div class="tech-box">
+            
+            <div class="tech-item">
+                <h4>01 // HTML Structure</h4>
+                <p>വെബ്‌സൈറ്റിന്റെ കണ്ടന്റും ലേഔട്ടും കൃത്യമായ ഓർഡറിൽ ക്രമീകരിച്ചിരിക്കുന്നു.</p>
+            </div>
+
+            <div class="tech-item">
+                <h4>02 // CSS Styling</h4>
+                <p>മനോഹരമായ കളർ കോമ്പിനേഷനുകളും, സ്മൂത്ത് ഹോവർ ഇഫക്റ്റുകളും നൽകി ഡിസൈൻ മനോഹരമാക്കിയിരിക്കുന്നു.</p>
+            </div>
+
+            <div class="tech-item">
+                <h4>03 // JavaScript</h4>
+                <p>വെബ്‌സൈറ്റിലെ ഡൈനാമിക് ഫങ്ഷനുകൾക്കും യൂസർ ഇൻ്ററാക്ഷനും വേണ്ടി ഉപയോഗിക്കുന്നു.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 SWALIH. DESIGNED WITH CREATIVITY.</p>
+    </footer>
+
+</body>
+</html>

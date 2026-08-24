@@ -1,275 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swalih | Graphic Designer & Visual Artist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #0f0e17;
-            --surface: #1e1b2e;
-            --text-main: #fffffe;
-            --text-muted: #a7a9be;
-            --primary: #ff8906;
-            --secondary: #f25f4c;
-            --accent: #e53170;
-            --border: rgba(255, 255, 255, 0.1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Outfit', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text-main);
-            overflow-x: hidden;
-        }
-
-        /* Navbar */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: var(--primary);
-        }
-
-        .nav-badge {
-            background: linear-gradient(135deg, var(--secondary), var(--accent));
-            color: white;
-            padding: 8px 18px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(229, 49, 112, 0.3);
-        }
-
-        /* Hero Section */
-        .hero {
-            max-width: 1000px;
-            margin: 60px auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 span {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            color: var(--text-muted);
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 30px auto;
-            line-height: 1.6;
-        }
-
-        /* Gallery Section */
-        .gallery-container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .work-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .work-card {
-            background: var(--surface);
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
-        }
-
-        .work-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            border-color: var(--primary);
-        }
-
-        .work-img {
-            height: 250px;
-            background: linear-gradient(45deg, #232136, #393552);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .work-img::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.5));
-        }
-
-        .work-info {
-            padding: 25px;
-        }
-
-        .work-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--text-main);
-        }
-
-        .work-info p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        /* Tech Stack Section */
-        .tech-section {
-            max-width: 1200px;
-            margin: 80px auto;
-            padding: 0 20px;
-        }
-
-        .tech-box {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .tech-item h4 {
-            color: var(--primary);
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .tech-item p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border);
-            margin-top: 80px;
-            font-size: 0.9rem;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Swalih is an independent graphic design studio shaping identities, digital worlds and objects with lasting presence.">
+  <title>SWALIH — Visual Experiences</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink: #151514; --paper: #eae6dc; --muted: #9c9a91; --line: rgba(234,230,220,.2); --gold: #c6a572; --display: "Playfair Display", Georgia, serif; --sans: "Manrope", sans-serif; --mono: "DM Mono", monospace; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--ink); color: var(--paper); font-family: var(--sans); font-size: 14px; overflow-x: hidden; }
+    body::before { content: ""; position: fixed; inset: 0; pointer-events: none; opacity: .08; z-index: 10; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E"); }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1320px, calc(100% - 72px)); margin: auto; }
+    .mono, .eyebrow, nav, .project-number, .scroll-cue { font: 500 10px var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+    header { height: 92px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); position: fixed; inset: 0 0 auto; z-index: 20; transition: background .3s, backdrop-filter .3s; }
+    header.scrolled { background: rgba(21,21,20,.78); backdrop-filter: blur(14px); }
+    .logo { font: 600 19px var(--display); letter-spacing: .04em; }
+    .logo span { color: var(--gold); }
+    nav { display: flex; gap: 34px; color: var(--muted); }
+    .menu-toggle { display: none; background: none; border: 0; color: var(--paper); font: 10px var(--mono); padding: 10px 0; }
+    nav a { transition: color .3s; } nav a:hover, nav a:focus { color: var(--paper); }
+    .availability { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 11px; }
+    .availability i { width: 6px; height: 6px; display: block; background: var(--gold); border-radius: 50%; box-shadow: 0 0 12px var(--gold); }
+    .hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding: 160px 0 110px; isolation: isolate; }
+    .hero::after { content: ""; position: absolute; z-index: -1; width: 52vw; height: 70vh; right: -12vw; top: 18vh; opacity: .52; background: linear-gradient(115deg, transparent 15%, rgba(200,169,107,.3) 48%, transparent 49%), url("https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1400&q=85") center/cover; mix-blend-mode: screen; filter: grayscale(1) contrast(1.2); animation: drift 16s ease-in-out infinite alternate; }
+    @keyframes drift { to { transform: translate3d(-2%, 2%, 0) scale(1.04); } }
+    .hero-copy { width: min(960px, 85%); }
+    .eyebrow { color: var(--gold); margin-bottom: 32px; }
+    h1 { font: 500 clamp(64px, 10.6vw, 170px)/.88 var(--display); letter-spacing: -.055em; margin: 0; }
+    h1 em { color: var(--gold); font-weight: 500; }
+    .hero-foot { display: flex; justify-content: space-between; align-items: end; margin-top: 70px; width: 78%; }
+    .hero-foot p { color: var(--muted); font-size: 13px; line-height: 1.7; max-width: 310px; margin: 0; }
+    .circle-link { width: 112px; height: 112px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; text-align: center; font: 10px/1.4 var(--mono); color: var(--gold); transition: background .35s, transform .35s; }
+    .circle-link:hover { background: var(--gold); color: var(--ink); transform: rotate(15deg); }
+    .scroll-cue { position: absolute; bottom: 38px; right: 0; color: var(--muted); writing-mode: vertical-rl; }
+    .intro-band { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 62px 0 74px; }
+    .intro-band p { font: 500 clamp(29px, 4vw, 57px)/1.08 var(--display); letter-spacing: -.035em; max-width: 950px; margin: 0; }
+    .intro-band p span { color: var(--muted); }
+    .section-head { display: flex; justify-content: space-between; align-items: baseline; padding: 110px 0 40px; }
+    .section-head h2 { font: 500 clamp(40px, 6vw, 82px)/1 var(--display); letter-spacing: -.05em; margin: 0; }
+    .section-head .count { color: var(--gold); }
+    .projects { display: grid; grid-template-columns: repeat(12, 1fr); gap: 64px 24px; }
+    .project { position: relative; }
+    .project:nth-child(1) { grid-column: 1 / span 7; } .project:nth-child(2) { grid-column: 9 / -1; margin-top: 160px; } .project:nth-child(3) { grid-column: 2 / span 5; } .project:nth-child(4) { grid-column: 8 / -1; margin-top: 70px; } .project:nth-child(5) { grid-column: 1 / span 5; margin-top: 35px; } .project:nth-child(6) { grid-column: 7 / -1; margin-top: 170px; }
+    .project-image { overflow: hidden; position: relative; aspect-ratio: 1.13; background: #292824; }
+    .project:nth-child(2) .project-image { aspect-ratio: .82; } .project:nth-child(3) .project-image { aspect-ratio: .9; }
+    .project-image img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(.72); transition: transform .8s cubic-bezier(.2,.7,.2,1), filter .5s; }
+    .project:hover img { transform: scale(1.055); filter: saturate(1); }
+    .project-image::after { content: "VIEW CASE STUDY  ↗"; position: absolute; inset: auto 18px 17px auto; opacity: 0; font: 10px var(--mono); color: white; transition: opacity .3s; }
+    .project:hover .project-image::after { opacity: 1; }
+    .project-meta { display: flex; justify-content: space-between; gap: 15px; padding-top: 16px; border-top: 1px solid var(--line); margin-top: 13px; }
+    .project-title { font: 500 25px var(--display); } .project-type { color: var(--muted); font-size: 11px; text-align: right; line-height: 1.5; }
+    .services { border-top: 1px solid var(--line); margin-top: 140px; padding-bottom: 130px; }
+    .service-row { display: grid; grid-template-columns: 1fr 2fr 1fr; align-items: center; padding: 25px 0; border-bottom: 1px solid var(--line); transition: padding .35s; }
+    .service-row:hover { padding-left: 13px; padding-right: 13px; color: var(--gold); }
+    .service-row h3 { font: 500 clamp(26px, 3.1vw, 45px) var(--display); margin: 0; } .service-row p { color: var(--muted); margin: 0; max-width: 290px; line-height: 1.6; } .service-no { color: var(--gold); text-align: right; }
+    .statement { padding: 126px 0 138px; background: var(--paper); color: var(--ink); }
+    .statement .eyebrow { color: #88714e; } .statement h2 { font: 500 clamp(48px, 8.5vw, 125px)/.91 var(--display); letter-spacing: -.06em; max-width: 1080px; margin: 0; } .statement h2 em { color: #9f8358; }
+    .about { display: grid; grid-template-columns: 1fr 1fr; gap: 12%; padding: 120px 0; border-bottom: 1px solid var(--line); } .about h2 { font: 500 64px/.95 var(--display); margin: 0; } .about p { color: var(--muted); line-height: 1.8; max-width: 410px; margin: 0 0 26px; } .about .mono { color: var(--gold); }
+    .clients { padding: 80px 0 120px; border-bottom: 1px solid var(--line); } .client-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 20px; margin-top: 38px; } .client-list span { color: var(--muted); font: 500 clamp(20px, 3vw, 39px) var(--display); }
+    .closing { padding: 125px 0; background: #24231f; } .closing h2 { font: 500 clamp(48px, 8vw, 118px)/.9 var(--display); letter-spacing: -.055em; margin: 0 0 30px; } .closing h2 em { color: var(--gold); } .closing p { color: var(--muted); max-width: 335px; line-height: 1.7; margin: 0 0 35px; } .text-link { color: var(--gold); font: 10px var(--mono); letter-spacing: .13em; text-transform: uppercase; border-bottom: 1px solid var(--gold); padding-bottom: 9px; }
+    .contact { padding: 125px 0 92px; } .contact h2 { font: 500 clamp(49px, 9vw, 140px)/.86 var(--display); letter-spacing: -.06em; margin: 0 0 70px; max-width: 1000px; } .contact h2 em { color: var(--gold); }
+  form { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 24px; max-width: 760px; } label { color: var(--muted); font: 10px var(--mono); text-transform: uppercase; letter-spacing: .1em; } input, textarea { width: 100%; background: transparent; border: 0; border-bottom: 1px solid var(--line); padding: 13px 0; color: var(--paper); outline: 0; font: 14px var(--sans); } textarea { resize: vertical; min-height: 54px; } .field-wide { grid-column: span 2; } input:focus, textarea:focus { border-color: var(--gold); } button { grid-column: span 2; width: fit-content; margin-top: 18px; background: var(--gold); border: 0; padding: 16px 24px; color: var(--ink); font: 500 10px var(--mono); letter-spacing: .12em; cursor: pointer; transition: background .3s, transform .3s; } button:hover { background: var(--paper); transform: translateY(-3px); }
+  footer { border-top: 1px solid var(--line); padding: 23px 0 28px; display: flex; justify-content: space-between; color: var(--muted); font: 10px var(--mono); text-transform: uppercase; letter-spacing: .1em; } .socials { display: flex; gap: 24px; }
+  @media (max-width: 700px) { .wrap { width: min(100% - 40px, 1320px); } header { height: 76px; } nav { gap: 13px; font-size: 9px; } .availability { display: none; } .hero { min-height: 83vh; padding: 60px 0 95px; } h1 { font-size: clamp(56px, 17vw, 100px); } .hero-foot { width: 100%; align-items: start; margin-top: 52px; } .circle-link { width: 84px; height: 84px; flex: 0 0 auto; } .scroll-cue { display: none; } .section-head { padding-top: 78px; } .projects { display: block; } .project, .project:nth-child(n) { margin: 0 0 54px; } .project:nth-child(even) { width: 87%; margin-left: auto; } .project-image, .project:nth-child(2) .project-image, .project:nth-child(3) .project-image { aspect-ratio: 1.08; } .services { margin-top: 70px; padding-bottom: 75px; } .service-row { grid-template-columns: 1fr auto; gap: 16px; } .service-row p { grid-column: 1 / -1; grid-row: 2; } .service-no { grid-column: 2; grid-row: 1; } .statement { padding: 83px 0 90px; } .about { grid-template-columns: 1fr; gap: 55px; padding: 80px 0; } .about h2 { font-size: 52px; } .contact { padding: 85px 0 65px; } form { display: block; } label { display: block; margin-top: 22px; } button { margin-top: 32px; } footer { gap: 20px; flex-wrap: wrap; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+  </style>
 </head>
 <body>
-
-    <!-- Header -->
-    <header>
-        <div class="logo">SWALIH.</div>
-        <div class="nav-badge">Graphic Designer • 18</div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Crafting Visuals That <span>Tell Stories</span></h1>
-        <p>ഹലോ സ്വാലിഹ്! ഗ്രാഫിക് ഡിസൈനിംഗ് വർക്കുകൾ മനോഹരമായി ആളുകളിലേക്ക് എത്തിക്കാൻ തയ്യാറാക്കിയ ഒരു പ്രൊഫഷണൽ പോർട്ട്ഫോളിയോ ഡിസൈൻ ആണിത്.</p>
-    </section>
-
-    <!-- Gallery Section -->
-    <div class="gallery-container">
-        <h2 class="section-title">Featured Works</h2>
-        <div class="work-grid">
-            
-            <div class="work-card">
-                <div class="work-img" style="background: linear-gradient(135deg, #f72585, #7209b7);">Brand Identity</div>
-                <div class="work-info">
-                    <h3>Brand & Logo Design</h3>
-                    <p>ബ്രാൻഡുകൾക്കായി ആകർഷകമായ ലോഗോകളും വിഷ്വൽ ഗൈഡ്‌ലൈനുകളും ക്രിയേറ്റ് ചെയ്ത പ്രോജക്റ്റുകൾ.</p>
-                </div>
-            </div>
-
-            <div class="work-card">
-                <div class="work-img" style="background: linear-gradient(135deg, #4361ee, #4cc9f0);">Social Media Post</div>
-                <div class="work-info">
-                    <h3>Social Media Creatives</h3>
-                    <p>മാർക്കറ്റിംഗിനും പ്രൊമോഷനുകൾക്കും വേണ്ടിയുള്ള മോഡേൺ പോസ്റ്ററുകളും ബാനറുകളും.</p>
-                </div>
-            </div>
-
-            <div class="work-card">
-                <div class="work-img" style="background: linear-gradient(135deg, #ff8906, #f25f4c);">UI / Visual Art</div>
-                <div class="work-info">
-                    <h3>Visual Concepts</h3>
-                    <p>ആർട്ടിസ്റ്റിക് ഡിസൈനുകളും ഡിജിറ്റൽ ഇല്ലസ്ട്രേഷൻ വർക്കുകളും.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- How it's built (HTML, CSS, JS section) -->
-    <section class="tech-section">
-        <h2 class="section-title">Behind The Code</h2>
-        <div class="tech-box">
-            
-            <div class="tech-item">
-                <h4>01 // HTML Structure</h4>
-                <p>വെബ്‌സൈറ്റിന്റെ കണ്ടന്റും ലേഔട്ടും കൃത്യമായ ഓർഡറിൽ ക്രമീകരിച്ചിരിക്കുന്നു.</p>
-            </div>
-
-            <div class="tech-item">
-                <h4>02 // CSS Styling</h4>
-                <p>മനോഹരമായ കളർ കോമ്പിനേഷനുകളും, സ്മൂത്ത് ഹോവർ ഇഫക്റ്റുകളും നൽകി ഡിസൈൻ മനോഹരമാക്കിയിരിക്കുന്നു.</p>
-            </div>
-
-            <div class="tech-item">
-                <h4>03 // JavaScript</h4>
-                <p>വെബ്‌സൈറ്റിലെ ഡൈനാമിക് ഫങ്ഷനുകൾക്കും യൂസർ ഇൻ്ററാക്ഷനും വേണ്ടി ഉപയോഗിക്കുന്നു.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 SWALIH. DESIGNED WITH CREATIVITY.</p>
-    </footer>
-
+  <header class="wrap"><a class="logo" href="#home" aria-label="Swalih home">STUDIO / SWALIH<span>®</span></a><nav id="main-nav" aria-label="Main navigation"><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button><div class="availability"><i></i> Available for select projects</div></header>
+  <main>
+    <section class="hero wrap" id="home"><div class="hero-copy"><div class="eyebrow">Independent design studio / 2026</div><h1>We design<br><em>visual</em><br>experiences.</h1><div class="hero-foot"><p>Brand identities, digital experiences and visual systems crafted for brands that refuse to be ordinary.</p><a class="circle-link" href="#work">Explore<br>selected<br>work ↓</a></div></div><div class="scroll-cue">Scroll to discover</div></section>
+    <section class="intro-band"><div class="wrap"><p>Good design makes you look.<br><span>Great design makes you feel.</span></p></div></section>
+    <section class="wrap" id="work"><div class="section-head"><h2>Selected work</h2><span class="count mono">(06 — 08)</span></div><div class="projects">
+      <a class="project" href="#contact"><div class="project-image"><img src="https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=1400&q=85" alt="Minimal perfume bottle and botanical arrangement"></div><div class="project-meta"><span class="project-title">Aurelia</span><span class="project-type">Luxury brand identity<br>Packaging / 2025</span></div></a>
+      <a class="project" href="#contact"><div class="project-image"><img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=85" alt="Editorial typography and design materials"></div><div class="project-meta"><span class="project-title">Noiré</span><span class="project-type">Fashion editorial<br>Art direction / 2025</span></div></a>
+      <a class="project" href="#contact"><div class="project-image"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=85" alt="Vintage computer in a colorful creative studio"></div><div class="project-meta"><span class="project-title">Monument</span><span class="project-type">Digital experience<br>Creative direction / 2024</span></div></a>
+      <a class="project" href="#contact"><div class="project-image"><img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1200&q=85" alt="Sculptural chair in an architectural interior"></div><div class="project-meta"><span class="project-title">Élan</span><span class="project-type">Packaging & art direction<br>Campaign / 2024</span></div></a>
+      <a class="project" href="#contact"><div class="project-image"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85" alt="Fashion editorial portrait in a tailored black outfit"></div><div class="project-meta"><span class="project-title">Velora</span><span class="project-type">Hospitality branding<br>Identity / 2024</span></div></a>
+      <a class="project" href="#contact"><div class="project-image"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85" alt="Luxury hospitality interior with sculptural furniture"></div><div class="project-meta"><span class="project-title">Atelier 09</span><span class="project-type">Creative direction<br>Visual system / 2023</span></div></a>
+    </div></section>
+    <section class="services wrap" id="services"><div class="section-head"><h2>What we create</h2><span class="count mono">(01 — 06)</span></div><div class="service-row"><h3>Brand strategy</h3><p>Positioning, visual direction and brand architecture.</p><span class="service-no mono">01</span></div><div class="service-row"><h3>Visual identity</h3><p>Logos, typography, color systems and complete identity systems.</p><span class="service-no mono">02</span></div><div class="service-row"><h3>Digital design</h3><p>Luxury websites, digital experiences and UI systems.</p><span class="service-no mono">03</span></div><div class="service-row"><h3>Packaging</h3><p>Premium packaging and product presentation.</p><span class="service-no mono">04</span></div><div class="service-row"><h3>Art direction</h3><p>Campaign concepts, photography direction and visual storytelling.</p><span class="service-no mono">05</span></div><div class="service-row"><h3>Creative direction</h3><p>Complete creative vision for ambitious brands.</p><span class="service-no mono">06</span></div></section>
+    <section class="statement"><div class="wrap"><div class="eyebrow">A small studio with a large ambition</div><h2>Good design gets attention.<br>Great design <em>stays with you.</em></h2></div></section>
+    <section class="about wrap" id="about"><h2>We make brands<br>impossible to ignore.</h2><div><p>Swalih is an independent creative design practice focused on creating distinctive identities and digital experiences for ambitious brands.</p><p>Our approach is curious, precise and deliberately human. Every detail has a role. Every project starts with a good conversation.</p><span class="mono">Based between everywhere & nowhere</span></div></section>
+    <section class="clients wrap"><div class="eyebrow">Long-term relationships</div><h2 class="section-head" style="padding-top:0"><span>Trusted by</span></h2><div class="client-list"><span>Aurelia</span><span>Monument</span><span>Élan</span><span>Vela House</span><span>North / South</span><span>Atelier 09</span></div></section>
+    <section class="closing"><div class="wrap"><div class="eyebrow">The next chapter</div><h2>Let’s create<br>something <em>iconic.</em></h2><p>Have a project, idea, or ambitious vision? Let’s turn it into something unforgettable.</p><a class="text-link" href="#contact">Start a project →</a></div></section>
+    <section class="contact wrap" id="contact"><div class="eyebrow">Start a conversation</div><h2>Tell us about<br>your <em>ambition.</em></h2><form><div><label for="name">Your name</label><input id="name" type="text" autocomplete="name" required></div><div><label for="email">Email address</label><input id="email" type="email" autocomplete="email" required></div><div><label for="company">Company</label><input id="company" type="text" autocomplete="organization"></div><div><label for="project-type">Project type</label><select id="project-type"><option>Choose a service</option><option>Brand identity</option><option>Digital design</option><option>Packaging</option><option>Creative direction</option></select></div><div><label for="budget">Budget</label><select id="budget"><option>Choose a range</option><option>$5k — $10k</option><option>$10k — $25k</option><option>$25k+</option></select></div><div class="field-wide"><label for="brief">Message</label><textarea id="brief"></textarea></div><button type="submit">SUBMIT INQUIRY ↗</button></form></section>
+  </main>
+  <footer class="wrap"><span>© 2026 Swalih Studio</span><div class="socials"><a href="#contact">Instagram</a><a href="#contact">Behance</a><a href="#contact">LinkedIn</a></div><span>All rights reserved</span></footer>
+  <script>const header = document.querySelector('header'); const menu = document.querySelector('.menu-toggle'); const nav = document.querySelector('nav'); window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 20), { passive: true }); menu.addEventListener('click', () => { const open = nav.classList.toggle('open'); menu.setAttribute('aria-expanded', open); menu.textContent = open ? 'Close' : 'Menu'; }); nav.addEventListener('click', () => { nav.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); menu.textContent = 'Menu'; }); document.querySelector('form').addEventListener('submit', function (event) { event.preventDefault(); const button = event.currentTarget.querySelector('button'); button.textContent = 'THANK YOU — WE WILL BE IN TOUCH'; button.disabled = true; });</script>
 </body>
 </html>
